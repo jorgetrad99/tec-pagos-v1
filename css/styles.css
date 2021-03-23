@@ -1,0 +1,296 @@
+@import url("../css/fonts.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  /* Theme Colors */
+  /* coolors.co */
+  --text-azul: rgb(18, 56, 130);
+  --text-gray: #3f4953;
+  --text-light: #686666da;
+  --bg-color: #0f0f0f;
+  --midnight: #104f55;
+
+  /* Gradient */
+  /* webgradients.com */
+  --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+  /* theme font-family */
+  --Abel: "Abel", cursive;
+  --Anton: "Anton", cursive;
+  --Josefin: "Josefin", cursive;
+  --Lexend: "Lexend", cursive;
+  --Livvic: "Livvic", cursive;
+}
+
+/*----------------- Global Classes ----------------- */
+
+a {
+  text-decoration: none;
+  color: var(--text-gray);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* En lugar de que colapsen los elementos al decrementar el width, */
+  /* Esa propiedad baja el emento para que no estén las cosas amontonadas */
+}
+
+ul {
+  list-style-type: none; /* Quita los puntitos de los elementos de una Lista */
+}
+
+h1 {
+  font-family: var(--Lexend);
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-family: var(--Lexend);
+}
+
+h3 {
+  font-family: var(--Abel);
+  font-size: 1.7875rem;
+  color: var(--text-gray);
+}
+
+button.btn {
+  border: none;
+  border-radius: 2.75rem;
+  padding: 1.375rem 4.125rem;
+  font-size: 1.375rem;
+  font-family: var(--Livvic);
+  cursor: pointer;
+}
+
+span {
+  font-family: var(--Abel);
+}
+
+.container {
+  margin: 0 6.875vw;
+}
+
+.text-azul {
+  color: var(--text-azul);
+  position: relative;
+  top: 0.34375rem;
+}
+
+/* .text-azul .negritas {
+  font-weight: 900px;
+} */
+
+p {
+  font-family: var(--Lexend);
+  color: var(--text-light);
+}
+/*----------------- Global Classes ----------------- */
+
+/*----------------- navbar ----------------- */
+.nav {
+  background-color: white;
+  padding: 0 2.75rem;
+  height: 0rem;
+  min-height: 12.4vh;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+  border-bottom: 0.25rem var(--text-azul) solid;
+  /* box-shadow: 10px 5px 5px; */
+}
+
+.nav .nav-menu {
+  justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  cursor: pointer;
+  display: none; /* Ocultar las barras para la version de escritorio */
+}
+
+.nav .toggle-collapse .toggle-icons {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 2rem 0rem;
+  padding-right: 1rem;
+}
+
+.nav .toggle-collapse .toggle-icons img {
+  position: relative;
+  bottom: 0.6875rem;
+}
+
+.collapse {
+  height: 35rem;
+}
+
+.nav .nav-items {
+  display: flex;
+  margin: 0;
+}
+
+.nav .nav-items .nav-link {
+  padding: 1.6rem 1rem;
+  position: relative;
+  font-family: var(--Abel);
+  font-size: 1.7rem;
+}
+
+.nav .nav-items .nav-link:hover {
+  background-color: var(--text-azul);
+}
+
+.nav .nav-items .nav-link:hover a {
+  color: white;
+}
+
+.nav .nav-brand a {
+  padding: 1rem 0;
+  display: block;
+  margin-right: 3rem;
+  font-family: var(--Lexend);
+  font-size: 2.5rem;
+}
+
+.nav .social {
+  padding: 1.8rem 0;
+}
+
+.nav .social img {
+  opacity: 0.7;
+  margin: 0 0.6rem;
+  width: 2.5rem;
+}
+
+.nav .social img:hover {
+  opacity: 1;
+}
+/*--------x--------- navbar -------x---------- */
+
+/*---------------- Main Content ---------------- */
+
+/*---------------- Site Title ---------------- */
+main {
+  background-color: white;
+}
+
+main .site-title {
+  background: url("../assets/Background-image.png");
+  background-size: cover;
+  height: 200vh;
+  display: flex;
+  justify-content: center;
+}
+
+main .site-title .site-background {
+  padding-top: 10rem;
+  text-align: center;
+  color: black;
+}
+
+main .site-title h1 h3 {
+  margin: 0.3rem;
+}
+
+main .site-title .btn {
+  margin: 1.8rem;
+  background: var(--sky);
+}
+
+main .site-title .btn:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+/*--------x-------- Site Title --------x-------- */
+
+/* ------------------ Site Content -----------------  */
+
+/* ---------x--------- Site Content --------x---------  */
+
+/*--------x-------- Main Content --------x-------- */
+
+/* ----------- Footer ---x--------*/
+.footer {
+  height: 100%;
+  background: var(--text-azul);
+  position: relative;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer .container > div {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0rem 0.9rem;
+  display: inline-block;
+}
+
+.footer .container h2 {
+  color: white;
+}
+
+.pie-pagina p {
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+/* -------x--- Footer ---x------- */
+
+/*---------- Viewport less than or equal to 750px ---------- */
+@media only screen and (max-width: 866px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
+
+  .nav .toggle-collapse {
+    display: initial;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  footer.footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  footer.footer .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 361px) {
+  nav.nav {
+    min-height: 15vh;
+  }
+}
+
+/*----x----- Viewport less than or equal to 750px -----x---- */
