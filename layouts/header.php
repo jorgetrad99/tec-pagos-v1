@@ -33,7 +33,7 @@
                         <li class="nav-link"><a href="../views/registro.php">Registrarse</a><i>
                     </ul>
                 </div>
-                <div class="social text-gray">
+                <div class="social">
                     <a href="https://www.facebook.com/TecNMCampusConkal"><img src="../assets/icons/facebook.png" alt="Facebook Icon"></a>
                     <a href="https://www.youtube.com/channel/UCI2nL1VXvy3dhMesWLXrOZg"><img src="../assets/icons/youtube.png" alt="Youtube Icon"></a>
                 </div>

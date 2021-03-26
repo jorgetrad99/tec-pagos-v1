@@ -143,7 +143,7 @@ p {
 }
 
 .collapse {
-  height: 42rem;
+  height: 52rem;
 }
 
 .nav .nav-items {
@@ -208,7 +208,7 @@ main {
 }
 
 main .site-title {
-  height: 100vh;
+  height: 120vh;
   display: flex;
   justify-content: center;
 }
